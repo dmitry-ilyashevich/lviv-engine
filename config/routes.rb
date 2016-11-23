@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'main#select_lang'
-
+  devise_for :users
   match 'djs/ie_fuck.js' => 'djs_css#ie_fuck', via: :all
 
   match "activate/:activation_code" => 'users#activate', via: :all
@@ -83,6 +83,7 @@ Rails.application.routes.draw do
     match "users/:id/upload_avatar" => 'users#upload_avatar', as: "upload_user_avator", via: :all
     match "users/list" => 'users#list', via: :all
     match "users/volunteers" => 'articles#show', defaults: {category: 'users', name: "volunteers"}, via: :all
+
 
     resources :users do
       as_routes

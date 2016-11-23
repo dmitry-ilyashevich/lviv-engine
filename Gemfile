@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 
 gem 'rails', '~> 4.2.0'
-
+gem 'devise'
 gem 'responders', '~> 2.0'
 
 gem 'protected_attributes'

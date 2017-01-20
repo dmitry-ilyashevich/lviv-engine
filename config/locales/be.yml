@@ -1,566 +1,504 @@
----
-be:
-  activerecord:
-    errors:
-      messages:
-        accepted: трэба прыняць
-        blank: трэба запоўніць
-        confirmation: не адпавядае ўпісанаму паролю
-        empty: не можа быць пустым
-        equal_to: мусіць быць роўным %{count}
-        even: мусіць быць цотным
+--- 
+be: 
+  active_scaffold: 
+    are_you_sure: "Are you sure?"
+  activerecord: 
+    errors: 
+      messages: 
+        accepted: "трэба прыняць"
+        blank: "трэба запоўніць"
+        confirmation: "не супадае з паўторам"
+        empty: "не можа быць пустым"
+        equal_to: "павінна быць роўным %{count}"
+        even: "павінна быць цотным"
         exclusion: зарэзервавана
-        greater_than: мусіць быць большым за %{count}
-        greater_than_or_equal_to: мусіць быць не меншым за %{count}
-        inclusion: не ўлучана ў спіс
-        invalid: няправільна
-        less_than: мусіць быць меншым за %{count}
-        less_than_or_equal_to: мусіць быць не большым за %{count}
-        not_a_number: не ёсць лічбай
-        odd: мусіць быць няцотным
-        taken: ужо занята
-        too_long: задоўгае (мусіць быць не большым за %{count} знакаў)
-        too_short: закароткае (мусіць быць не меншым за %{count} знакаў)
-        wrong_length: хібнай даўжыні (мусіць мець %{count} знакаў)
-      template:
-        body: 'Для гэтых палёў узніклі праблемы:'
-        header:
-          few: "%{model}: запісаць не ўдалося з прычыны %{count} памылак"
-          many: "%{model}: запісаць не ўдалося з прычыны %{count} памылак"
-          one: "%{model}: запісаць не ўдалося з прычыны %{count} памылкі"
-          other: "%{model}: запісаць не ўдалося з прычыны %{count} памылак"
-  active_scaffold:
-    are_you_sure: Вы ўпэўнены?
-  date:
-    abbr_day_names:
-    - Няд
-    - Пан
-    - Аўт
-    - Сер
-    - Чац
-    - Пят
-    - Суб
-    abbr_month_names:
-    - ''
-    - Сту
-    - Лют
-    - Сак
-    - Кра
-    - Тра
-    - Чэр
-    - Ліп
-    - Жні
-    - Вер
-    - Кас
-    - Ліс
-    - Сне
-    day_names:
-    - нядзеля
-    - панядзелак
-    - аўторак
-    - серада
-    - чацвер
-    - пятніца
-    - субота
-    formats:
+        greater_than: "павінна перавышаць %{count}"
+        greater_than_or_equal_to: "павінна быць не меней за %{count}"
+        inclusion: "не ўключана ў спіс"
+        invalid: неправільна
+        less_than: "павінна быць меней за %{count}"
+        less_than_or_equal_to: "павінна быць не болей за %{count}"
+        not_a_number: "не ёсць лічбай"
+        odd: "павінна быць няцотным"
+        taken: "ужо ўзятае"
+        too_long: "задоўгае (можна як найбольш %{count} сімвалаў)"
+        too_short: "закароткае (можна як найменьш %{count} сімвалаў)"
+        wrong_length: "неправільнай даўжыні (трэба %{count} сімвалаў)"
+      template: 
+        body: "З наступнымі палямі узніклі праблемы:"
+        header: 
+          few: "%{model}: захаваць не атрымалася з-за %{count} памылак"
+          many: "%{model}: захаваць не атрымалася з-за %{count} памылак"
+          one: "%{model}: захаваць не атрымалася з-за %{count} памылкі"
+          other: "%{model}: захаваць не атрымалася з-за %{count} памылак"
+  date: 
+    abbr_day_names: 
+      - Нд
+      - Пн
+      - Аў
+      - Ср
+      - Чц
+      - Пт
+      - Сб
+    abbr_month_names: 
+      - ~
+      - стд.
+      - лют.
+      - сак.
+      - крс.
+      - трв.
+      - чрв.
+      - ліп.
+      - жнв.
+      - врс.
+      - кст.
+      - ліст.
+      - снж.
+    day_names: 
+      - нядзеля
+      - панядзелак
+      - аўторак
+      - серада
+      - чацвер
+      - пятніца
+      - субота
+    formats: 
       default: "%d.%m.%Y"
-    month_names:
-    - ''
-    - студзеня
-    - лютага
-    - сакавіка
-    - красавіка
-    - траўня
-    - чэрвеня
-    - ліпеня
-    - жніўня
-    - верасня
-    - кастрычніка
-    - лістапада
-    - снежня
+      long: "%B %d, %Y"
+      short: "%b %d"
+    month_names: 
+      - ~
+      - студзеня
+      - лютага
+      - сакавіка
+      - красавіка
+      - траўня
+      - чэрвеня
+      - ліпеня
+      - жніўня
+      - верасня
+      - кастрычніка
+      - лістапада
+      - снежня
     none: Няма
-    order:
-    - day
-    - month
-    - year
-  datetime:
-    distance_in_words:
-      about_x_hours:
-        one: блізу адной гадзіны
-        other: блізу %{count} гадзін
-      about_x_months:
-        one: блізу аднаго месяца
-        other: блізу %{count} месяцаў
-      about_x_years:
-        one: блізу аднаго года
-        other: блізу %{count} гадоў
+    order: 
+      - !ruby/symbol day
+      - !ruby/symbol month
+      - !ruby/symbol year
+  datetime: 
+    distance_in_words: 
+      about_x_hours: 
+        one: "каля 1 гадзіны"
+        other: "каля %{count} гадзін"
+      about_x_months: 
+        one: "каля 1 месяца"
+        other: "каля %{count} месяцаў"
+      about_x_years: 
+        one: "каля 1 года"
+        other: "каля %{count} гадоў"
       half_a_minute: паўхвіліны
-      less_than_x_minutes:
-        one: менш за адну хвіліну
-        other: менш за %{count} хвілін
-      less_than_x_seconds:
-        one: менш за адну секунду
-        other: менш за %{count} секундаў
-      over_x_years:
-        one: больш за адзін год
-        other: больш за %{count} гадоў
-      x_days:
-        one: адзін дзень
+      less_than_x_minutes: 
+        one: "меней за хвіліну"
+        other: "меней за %{count} хвілінаў"
+      less_than_x_seconds: 
+        one: "меней за 1 секунду"
+        other: "меней за %{count} секундаў"
+      over_x_years: 
+        one: "болей за 1 год"
+        other: "болей за %{count} гадоў"
+      x_days: 
+        one: "1 дзень"
         other: "%{count} дзён"
-      x_minutes:
-        one: адна хвіліна
-        other: "%{count} хвілін"
-      x_months:
-        one: адзін месяц
+      x_minutes: 
+        one: "1 хвіліна"
+        other: "%{count} хвілінаў"
+      x_months: 
+        one: "1 месяц"
         other: "%{count} месяцаў"
-      x_seconds:
-        one: адна секунда
+      x_seconds: 
+        one: "1 секунда"
         other: "%{count} секундаў"
-    prompts:
-      day: дзён
-      hour: гадзін
-      minute: хвілін
-      month: месяцаў
-      second: секундаў
-      year: гадоў
-  description:
-    abstract:
-      body: "рэкамендаваныя мовы: беларуская, руская альбо англійская;\r\nрэкамендаваны
-        памер: не больш за 6000 знакаў;\r\nВы можаце выкарыстоўваць разметку LaTeX,
-        \"Textile\":http://txstyle.org/ альбо просты тэкст."
-      license: (Выбраць ліцэнзію можна, наведаўшы "creativecommons.org":http://creativecommons.org/choose)
-    conference_registration:
-      days: У якія дні вы плануеце ўзяць удзел у канферэнцыі?
-      floor: Некаторыя ўдзельнікі LVEE аддаюць перавагу намётам, а не дамкам турбазы.
-        Акрамя яскравых турыстычных уражанняў, гэта дае і зніжку 50% з арганізацыйнага
-        ўнёску. Наведайце старонку "намёты":https://lvee.org/ru/wiki_pages/%5B2016%5D%20%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%BA%D0%B8,
-        каб даведацца больш.
-      food: Якой ежы вы аддаяце перавагу?
-      index: Рэгістрацыя на канферэнцыю
-      meeting: Ці трэба вас сустракаць?
-      menu:
-        translation_creation_error: Памылка стварэння перакладу
-      phone: Нумар тэлефону, праз які з вамі можна скантактавацца ў часе канферэнцыі
-        (улучна з кодам краіны)
-      proposition: Вядома, што свабодныя праграмы распрацоўвае грамада з узделам шматлікіх
-        добраахвотнікаў. Таму, калі ласка, распавядзіце, які ўнёсак вы можаце зрабіць
-        у нашу канферэнцыю. Хай гэта будзе выступленне або менш фармальнае паведамленне
-        за круглым сталом (workshop) пра тое, як вы або ваша фірма ўкараняеце, выкарыстоўваеце
-        ці распрацоўваеце свабодныя праграмы. Калі вы хочаце выступіць або зарганізаваць
-        семінар на канферэнцыі, падайце тэму вашага выступлення i дашлiце тэзісы.
-      quantity: Колькі людзей едзе на канферэнцыю, разам з вамі (улічваючы вас)?
-      residence: З кім з зарэгістраваных удзельнікаў вы хочаце жыць у адным пакоі?
-      title: Рэгістрацыя на канферэнцыю %{conference}
-      transport_from: Якім транспартам вы збіраецеся выязджаць з канферэнцыі?
-      transport_to: Якім транспартам вы плануеце прыязджаць на канферэнцыю?
-      tshirt: Ваш памер футболкі
-    user:
-      avator: Ваш фотаздымак. Найлепш, каб ён выяўляў ваш твар.
+    prompts: 
+      day: Дзень
+      hour: Гадзінаў
+      minute: Хвілінаў
+      month: Месяц
+      second: Секундаў
+      year: Год
+  description: 
+    conference_registration: 
+      days: "У якія дні вы плануеце свой удзел?"
+      floor: "Do you accept the following conditions: organization fee decreases; bed is not provided; food is provided? You can sleep in sleeping bag on the floor in the room with other participants?"
+      food: "Якой ежы вы аддаеце перавагу?"
+      index: "Рэгістрацыя на канферэнцыю"
+      meeting: "Ці трэба вас сустракаць?"
+      phone: "Нумар тэлефона, па якім можна скантактавацца з вамі падчас канферэнцыі (з кодам краіны)"
+      proposition: "Вядома, што свабодныя праграмы распрацоўвае грамада з узделам шматлікіх добраахвотнікаў, таму распавядзіце, калі ласка, які ўнёсак вы можаце зрабіць у наш сход. Няхай гэта будзе даклад альбо меней фармальнае паведамленне ў рамках круглага стала (workshop), як вы ці ваша арганізацыя укараняеце, выкарыстоўваеце ці распрацоўваеце свабодныя праграмы Калі вы збіраецеся зрабіць даклад ці арганізаваць семінар на канферэнцыі, падайце тэму вашага даклада. Тэзісы дасылайце на адрас: fosslviv@gmail.com ."
+      quantity: "Колькі людзей едзе на канферэнцыю?"
+      residence: "Who of the registered participants you want to share room with?"
+      title: "Рэгістрацыя на канферэнцыю %{conference}"
+      transport_from: "Якім транспартам плануеце дабірацца з канферэнцыі?"
+      transport_to: "Якім транспартам плануеце дабірацца на канферэнцыю?"
+      tshirt: "Ваш памер футболкі"
+    user: 
+      avator: "Вашае фота. Будзе файна, калі на ім будзе ваш твар."
       city: Горад
       country: Краіна
-      email: Ваш e-mail
-      first_name: ''
-      last_name: Правілы канферэнцыі вымагаюць сапраўднага прозвішча
-      login: прынамсі тры знакі
-      occupation: Месца працы або навучання і галіна дзейнасці (з кароткай назваю
-        арганізацыі)
-      password: прынамсі чатыры знакі
-      password_confirmation: Паўтор паролю
-      projects: Праекты свабоднага і адкрытага праграмавання (FOSS), у якіх вы бралі
-        ці бераце ўдзел, і ваша роля ў іх
-      subscribed: Гэтая опцыя дазваляе атрымоўваць навіны ды іншыя карысныя звесткі
-        ад арганізатараў канферэнцыі.
-      subscribed_talks: Адзначыўшы гэты пункт, вы згаджаецеся браць чынны ўдзел у
-        арганізацыйных дыскусіях на канферэнцыі, дапамагаючы падрыхтоўваць і падтрымоўваць
-        яе бег. LVEE ёсць валантэрскім праектам, а таму часта адчувае нястачу людзей,
-        гатовых займацца такімі справамі, а таму мы вітаем адзначэнне гэтага пункту
-        і чынны ўдзел у працы арганізацыйнага камітэта.
-  devise:
-    failure:
-      already_authenticated: Вы ужо аўтарызваліся
-  label:
-    abstract:
-      additional_files: Малюнкі і іншыя файлы могуць быць загружаны тут, у выпадку
-        неабходнасці
-      authors: Аўтары
-      body: Асноўны тэкст тэзісаў
-      change_summary: Змены ў гэтай версіі можна апісаць як
-      conference: Канферэнцыя
-      create_new: Стварыць новыя тэзісы
-      edit: Рэдагаванне тэзісаў
-      editors: Карыстачы, якія могуць рэдагаваць тэкст
-      for_review: Гатовыя да разгляду
-      initial_version: Пачатковая версія
-      license: Тэкст ліцэнзаваны пад
-      list: Тэзісы да разгляду
-      list_selection: 'Спіс тэзісаў:'
-      list_user: Вашыя тэзісы
-      new: Стварэнне тэзісаў
-      ready_for_review: Гэтыя тэзісы гатовыя да разгляду
-      summary: Анатацыя (па-англійску, рэкамендаваны памер - да 500 знакаў)
-      title: Загаловак
-      updated_at: Апошняя змена
-      user: Карыстальнік
-      yourself: Вы
-    article:
+      email: "Ваш e-mail"
+      first_name: ""
+      last_name: "Правіламі канферэнцыі патрабуецца рэальнае прозвішча"
+      login: "як найменей тры сімвалы"
+      occupation: "Месца працы альбо вучобы і сфера дзейнасці (з кароткай назвай арганізацыі)"
+      password: "як найменей 4 сімвалы"
+      password_confirmation: "Тое самае, што і пароль"
+      projects: "Праекты Free Software / Open Source (FOSS), у якіх вы бралі ці бераце ўдзел і вашая роля ў іх"
+      subscribed: "This option allows to receive news and other useful information from the Conference organizers."
+      subscribed_talks: "By choosing this You are going to take part in working discussions on the Conference preparing and carrying on. Being a volunteer project, FOSSLviv is often subject to shortage of performers, and therefore we recomend to activate this option and to actively participate in work of the organization board."
+  label: 
+    article: 
       body: Цела
       category: Катэгорыя
-      creating: Стварэнне артыкула
-      editing: Рэдагаванне артыкула
-      in_menu: У меню?
-      listing: Спіс артыкулаў
+      creating: "Стварэнне артыкула"
+      editing: "Рэдагаванне артыкула"
+      in_menu: "У меню?"
+      listing: "Спіс артыкулаў"
       locale: Мова
       name: Назва
-      new: Новы артыкул
+      new: "Новы артыкул"
       title: Загаловак
-    badge:
-      bottom: Падвал
-      tags: Цэтлікі
-      top: Загаловак
-    common:
+    badge: 
+      bottom: Bottom
+      tags: Tags
+      top: Top
+    common: 
+      _select_: Вылучыць
       back: Назад
-      back_to_list: Назад да спісу
+      back_to_list: "Back to list"
       cancel: Скасаваць
-      count: Колькасць
+      count: Count
       create: Стварыць
-      delete: Сцерці
+      delete: Выдаліць
       download: Сцягнуць
       edit: Рэдагаваць
-      editTranslation: Рэдагаваць пераклад
-      preview: Папярэдні прагляд
-      publish: Апублікаваць
-      publish_now: Апублікаваць зараз
-      save: Запісаць
+      editTranslation: "Рэдагаваць пераклад"
+      preview: "Папярэдні прагляд"
+      publish: Публікаваць
+      publish_now: "Апублікаваць зараз"
+      save: Захаваць
       show: Паказаць
       translate: Перакласці
-      unknown_user: Невядомы
-      update: Замацаваць
-      upload: Зацягнуць
-      view_changes: Паглядзець змены
-      _select_: Вылучыць
-    conference:
-      available: Вы можаце ўзяць удзел у наступных канферэнцыях
-      creating: Стварэнне канферэнцыі
-      finish_date: Дата заканчэння
-      listing: Спіс канферэнцый
+      unknown_user: Unknown
+      update: Узнавіць
+      upload: Заліць
+      view_changes: "Глядзець змяненні"
+    conference: 
+      available: "Вы можаце ўзяць удзел у наступных канферэнцыях"
+      creating: "Стварэнне канферэнцыі"
+      finish_date: "Дата сканчэння"
+      listing: "Спіс канферэнцыяў"
       name: Назва
-      new: Новая канферэнцыя
-      participated: Вы бралі ўдзел
-      register: Зарэгістравацца на %{conference}
-      registration_closed: скончаная
-      registration_opened: распачатая
-      registration_opened?: Рэгістрацыя распачатая?
-      registred: Вы зарэгістраваны
-      show: Канферэнцыя %{name} (%{start_date} - %{finish_date}
-      start_date: Дата пачатку
-      upcoming: Наступныя канферэнцыі
-    conference_registration:
-      abstracts: Тэзісы
-      approved_edit: Пацвердзьце свой удзел у %{conference}
-      badges: Значкі
-      badges_title: Значкі на %{conference}
-      cancel_registration: Cancel registration
-      days: Дні ўдзелу
-      edit: Звесткі пра ўдзельніка %{conference}
-      floor: Калі ласка, адзначце, калі вы плануеце жыць у намёце з 50% зніжкаю з
-        арганізацыйнага ўнёску
-      food: Пераважнае харчаванне
-      index: Зарэгістраваныя на канферэнцыю
-      meeting: Ці трэба сустрэць
-      phone: Ваш кантактны тэлефон
-      proposition: Вашы прапановы
-      proposition_list: Выступленне
-      quantity: Колькасць удзельнікаў
-      residence: Жытло
-      title: Рэгістрацыя на канферэнцыю %{conference}
-      transport_from: Транспарт з канферэнцыі
-      transport_from_list:
-        bus_grodno: Маршрутка з Горадні
-        bus_minsk: Маршрутка да Менску
+      new: "Новая канферэнцыя"
+      participated: "Вы бралі ўдзел"
+      register: "Зарэгістравацца на %{conference}"
+      registration_closed: закрыта
+      registration_opened: адкрыта
+      registration_opened?: "Рэгістрацыя адкрытая?"
+      registred: "Вы былі зарэгістраваны"
+      show: "Канферэнцыя %{name} (%{start_date} - %{finish_date}"
+      start_date: "Дата пачатку"
+      upcoming: "Найбліжэйшыя канферэнцыі"
+    conference_registration: 
+      approved_edit: "Confirm participation in %{conference}"
+      badges: Badges
+      badges_title: "Badges for %{conference}"
+      days: "Дні ўдзелу"
+      edit: " %{conference} participant's data"
+      floor: "Can you sleep on the floor?"
+      food: "Пераважная дыета"
+      index: "Рэгістрацыі на канферэнцыю"
+      meeting: "Ці патрабуецца сустрэча"
+      phone: "Ваш кантактны тэлефон"
+      proposition: "Вашыя прапановы"
+      proposition_list: Report
+      quantity: "Колькасць удзельнікаў"
+      residence: Accommodation
+      title: "Рэгістрацыя на канферэнцыю %{conference}"
+      transport_from: "Транспарт з канферэнцыі"
+      transport_from_list: 
+        bus_grodno: "Bus to Grodno"
+        bus_minsk: "Bus to Minsk"
         independent: Самастойна
-      transport_to: Транспарт на канферэнцыю
-      transport_to_list:
-        bus_grodno: Маршрутка з Горадні
-        bus_minsk: Маршрутка з Менску
+      transport_to: "Транспарт на канферэнцыю"
+      transport_to_list: 
+        bus_grodno: "Minibus from Grodno"
+        bus_minsk: "Minibus from Minsk"
         independent: Самастойна
-      tshirt: Памер футболкі
-      update_model: Рэгістрацыя на канферэнцыю
-    diff:
-      changed_at: Зменена
-      change_article_title: Змены ў артыкуле %{article} з адмены %{from} да %{to}
-      change_wiki_title: Змены на старонцы '%{wiki_page}' з адмены %{from} да %{to}
-      editor: Рэдактар
-      from: Ад
-      new_article_title: Артыкул %{article} не мае папярэдніх адмен
-      new_wiki_title: Старонка '%{wiki_page}' не мае папярэдніх адмен
-      to: Да
-      version: Адмена
-    editor_log:
-      article_changed: Артыкул %{obj} змяніў карыстальнік %{user}
-      article_created: Артыкул %{obj} стварыў карыстальнік %{user}
-      wiki_page_changed: Старонку %{obj} змяніў карыстальнік %{user}
-      wiki_page_created: Старонку %{obj} стварыў карыстальнік %{user}
-    language:
-      code3: Трохлітарны код мовы (ISO 639-2)
-      creating: Стварэнне моўнага модулю
-      editing: Рэдагаванне моўнага модулю
-      id: Дзвюхлітарны код мовы
-      listing: Спіс моваў
-      name: Поўная назва мовы (па-ангельску)
-      new: Новы моўны модуль
-      published: Апублікаваны?
-      upload: Зацягнуць моўны модуль
-    metainfo:
-      edit: Рэдагаваць метазвесткі
-    news:
-      abstract: Кароткае апісанне
-      add: Дадаць навіну
-      all_news: Усе навіны
+      tshirt: "Памер футболкі"
+      update_model: "Conference Registration"
+    diff: 
+      change_article_title: "Diff for article %{article} from version %{from} to %{to}"
+      change_wiki_title: "Diff for page '%{wiki_page}' from version %{from} to %{to}"
+      changed_at: "Changed at"
+      editor: Editor
+      from: From
+      new_article_title: "Article %{article} has no previous versions"
+      new_wiki_title: "Page '%{wiki_page}' has no previous versions"
+      to: To
+      version: Version
+    editor_log: 
+      article_changed: "Article %{object} was changed by %{user}"
+      article_created: "Article %{object} was created by %{user}"
+      wiki_page_changed: "Wiki page %{object} was changed by %{user}"
+      wiki_page_created: "Wiki page %{object} was created by %{user}"
+    language: 
+      code3: "3-letter (ISO 639-2) language code id"
+      creating: "Стварэнне мовы"
+      editing: "Рэдагаванне мовы"
+      id: "Ідэнтыфікатар мовы з двух літар"
+      listing: "Спіс моваў"
+      name: "Поўная назва мовы (па-ангельску)"
+      new: "Новая мова"
+      published: Апублікаваная?
+      upload: "Заліць мову"
+    metainfo: 
+      edit: "Edit MetaInfo"
+    news: 
+      abstract: Резюме
+      add: "Дадаць навіну"
+      all_news: "Усе навіны"
       author: Аўтар
-      back_to_list: Назад да спісу навінаў
-      body: Тэкст навіны
-      creating: Стварэнне навіны
-      editing: Рэдагаванне навіны
-      last_news: Апошнія навіны
-      publish: Апублікаваць навіну
-      published_at: Апублікавана %{published}
+      back_to_list: "Назад да спіса навінаў"
+      body: "Змесціва навіны"
+      creating: "Стварэнне навіны"
+      editing: "Рэдагаванне навіны"
+      last_news: "Апошнія навіны"
+      publish: "Апублікаваць навіну"
+      published_at: "Апублікавана %{published}"
       title: Загаловак
-      translating: Пераклад навіны
-      unpublished: Не апублікавана
-      will_be_published: Будзе апублікавана %{published}
-    session:
-      login: Конт
+      translating: "Пераклад навіны"
+      unpublished: "Не апублікавана"
+      will_be_published: "Будзе апублікавана %{published}"
+    session: 
+      login: Лагін
       loginButton: Увайсці
       logout: Выйсці
       password: Пароль
-      rememberMe: Запомніць мяне
-    statistics:
-      browser: Гартач
-      conference: Статыстыка аб рэгістрацыі на %{conference}
-      country: Краіна
-      operating_system: Аперацыйная сістэма
-      registration:
-        approved_men: Зацверджаных асобаў
-        approved_registrations: Зацверджаных рэгістрацый
-        days_title: Статыстыка аб колькасці дзён удзелу
-        registration_title: Статыстыка аб рэгістрацыі
-        total_men: Агулам асобаў
-        total_registrations: Агулам рэгістрацый
-        transport_from_title: Статыстыка аб транспартаванні з канферэнцыі
-        transport_to_title: Статыстыка аб транспартаванні на канферэнцыю
-      title:
-        browser_statistic: Статыстыка аб вэб-гартачах наведнікаў
-        conference: Статыстыка аб рэгістрацыі на канферэнцыю
-        country_statistic: Статыстыка аб краінах наведнікаў
-        full: Статыстыка ад 20-га красавіка 2009 г.
-        month: Статыстыка з мінулага месяца
-        os_statistic: Статыстыка аб аперацыйных сістэмах наведнікаў
-        total_visitors: 'Агулам наведнікаў: %{count}'
-        week: Статыстыка з мінулага тыдня
-      visits: Наведванні
-    user:
-      avator: Ваш фотаздымак
-      city: Горад
+      rememberMe: "Памятаць мяне"
+    statistics: 
+      browser: Browser
+      conference: "Registration statistics for %{conference}"
+      country: Country
+      operating_system: "Operating system"
+      registration: 
+        approved_men: "Approved men"
+        approved_registrations: "Approved registration"
+        days_title: "Participance days statistics"
+        registration_title: "Registration statistics"
+        total_men: "Total men"
+        total_registrations: "Total registration"
+        transport_from_title: "Transport from conference statistics"
+        transport_to_title: "Transport to conference statistics"
+      title: 
+        browser_statistic: "Visitor's Browser Statistics"
+        conference: "Conference registration statistics"
+        country_statistic: "Visitor's Country Statistic"
+        full: "Statistics from 20th of April 2009"
+        month: "Statistics for last month"
+        os_statistic: "Visitor's Operating Systems Statistics"
+        total_visitors: "Total visitors: %{count}"
+        week: "Statistics for last week"
+      visits: Visits
+    user: 
+      avator: "Вашае фота"
+      city: Месца
       country: Краіна
       create: Зарэгістравацца
-      edit: Змяніць профільныя звесткі
-      email: Электронная пошта
+      edit: "Edit profile"
+      email: "Электронная пошта"
       first_name: Імя
-      from: Адкуль
-      full_name: Поўнае імя
-      join_us: Далучайся да нас
+      from: From
+      full_name: Name
+      join_us: "Далучыся да нас зараз"
       last_name: Прозвішча
       login: Увайсці
-      occupation: Месца навучання ці працы
+      occupation: "Месца вучобы альбо працы"
       password: Пароль
-      password_confirmation: Паўтарыце пароль
-      password_restore: Аднаўленне паролю
-      password_restore_link: аднавіце
-      photo: Фота
-      projects: Праекты FOSS
+      password_confirmation: "Паўтарыце пароль"
+      password_restore: "Password Restore"
+      password_restore_link: Restore
+      photo: Photo
+      projects: "Праекты FOSS"
       register: Зарэгістравацца
-      subscribed: Падпісацца на інфармацыйны спіс рассылання пошты
-      subscribed_talks: Падпісацца на арганізацыйны спіс рассылання пошты
-      title: "%{full_name} (%{login}), за яго адказваць вам"
-      to_profile: Да вашага профілю
-      update_model: Змена асабістых звестак
-    wiki_page:
-      body: Цела
-      creating: Стварыць Wiki-старонку
-      editing: Рэдагаваць Wiki-старонку
-      listing: Спіс Wiki-старонак
-      name: Назва
-      new: Новая старонка Wiki
-      user: Апошні рэдактар
-  mail:
-    account:
+      subscribed: "Падпісацца на інфармацыйны спіс рассылкі"
+      subscribed_talks: "Subscribe to organization board talks mailllist"
+      title: "%{full_name} (%{login}), ваш профіль - ваша справа"
+      to_profile: "Да вашага профіля"
+      update_model: "Edit your personal data"
+    wiki_page: 
+      body: Body
+      creating: "Стварыць Wiki старонку"
+      editing: "Рэдагаваць Wiki старонку"
+      listing: "Спіс Wiki старонак"
+      name: Імя
+      new: "Новая старонка Wiki"
+      user: "Апошні, хто змяняў"
+  mail: 
+    account: 
       activate: |-
-        Каб задзейнічаць ваш конт, перайдзіце да наступнага адрасу:
-        %{url}
-      activated: Ваш конт задзейнічаны
-      activation_restore: Перад уваходам трэба задзейнічаць свой конт
-      created: Ваш конт створаны
+          Каб актываваць ваш рахунак, перайдзіце на наступны адрас:
+          %{url}
+      activated: "Ваш рахунак быў актываваны"
+      activation_restore: "You account should be activated before login"
+      created: "Ваш рахунак быў створаны"
       edit_data: |-
-        Вы можаце ўвайсці ў сістэму і рэдагаваць асабістыя звесткі:
-        %{url}
+          Вы можаце увайсці і рэдагаваць вашы даныя:
+          %{url}
       information: |-
-        Назва карыстальніка: %{login}
-        Пароль:              %{password}
+          Імя карыстальніка: %{login}
+          Пароль:            %{password}
       restore: |-
-        З IP-адрасу %{ip} запатрабавалі аднаўлення паролю.
-        Мы адмянілі ваш пароль. Ніжэй мы падаем вашы новыя звесткі для ўваходу.
-    signature: "-- \nРобат LVEE"
-    subject:
-      activation: Задзейнічанне конту LVEE
-      activation_complete: Ваш конт LVEE задзейнічаны
-      activation_restore: Задзейнічанне конту LVEE (паўтор)
-      password_restore: Аднаўленне паролю LVEE
-    title: Вітаем, %{full_name}
-  menu:
-    admin:
-      conferences: Адміністратар канферэнцыі
-      conference_registrations: Адміністратар рэгістрацый на канферэнцыю
-      info_mailer: Пошта з info@lvee.org
-      sponsors: Адміністратар фундатарства
-      statuses: Адміністратар статусаў
-      title: Адміністратар
-      users: Адміністратар карыстальнікаў
-    conference:
-      about: Канферэнцыя
+          Password restore was requested from %{ip}. 
+          We reseted your password. Above you can find new login information.
+    signature: |-
+        -- 
+        Робат сайта conference.linux.lviv.ua
+    subject: 
+      activation: "Актывацыя рахунка conference.linux.lviv.ua"
+      activation_complete: "Ваш рахунак для conference.linux.lviv.ua быў актываваны"
+      activation_restore: "Account activation for conference.linux.lviv.ua (repeat)"
+      password_restore: "Password restore for conference.linux.lviv.ua"
+    title: "Вітаю, %{full_name}"
+  menu: 
+    admin: 
+      conference_registrations: "Conference registrations admin"
+      conferences: "Conferences admin"
+      info_mailer: "Mailer from fosslviv@gmail.com"
+      sponsors: "Sponsors admin"
+      statuses: "Statuses admin"
+      title: Admin
+      users: "Users admin"
+    conference: 
+      about: "Аб канферэнцыi"
       attribution: Атрыбутыка
-      attribution_winter: Атрыбутыка
       history: Гісторыя
+      linux: GNU/Linux
       payment: Аплата
-      payment_winter: Аплата
-      place: Месца канферэнцыі
-      place_winter: Месца канферэнцыі
-      press: Прэса
+      place: "Месца канферэнцыі"
+      press: "У друку"
       statistics: Статыстыка
-      title: Канферэнцыя
-    contacts:
-      official: Кантактная інфармацыя
-      organizers: Арганізацыйны камітэт
-      title: Кантакты
-    editor:
-      articles: Рэдактар артыкулаў
-      image_uploader: Зацягванне выяваў
-      language: Рэдактар моўных модуляў
-      metainfo: Рэдактар метазвестак
-      news: Рэдактар навін
-      rss: Рэдактар RSS
-      title: Рэдактар
-      translations: Пераклады
-    main:
-      title: Галоўная
-    reports:
-      about: Пра выступленні
-      abstract: Афармленне тэзісаў
-      lvee_2013_materials: Матэрыялы LVEE 2013
-      lvee_2014_materials: Матэрыялы LVEE 2014
-      lvee_2015_materials: Матэрыялы LVEE 2015
-      lvee_winter_2014_presentations: Матэрыялы LVEE Winter 2014
-      materials_2005: Матэрыялы LVEE 2005
-      materials_2006: Матэрыялы LVEE 2006
-      materials_2007: Матэрыялы LVEE 2007
-      materials_2008: Матэрыялы LVEE 2008
-      materials_2009: Матэрыялы LVEE 2009
-      materials_2010: Матэрыялы LVEE 2010
-      materials_2011: Матэрыялы LVEE 2011
-      materials_2012: Матэрыялы LVEE 2012
-      materials_2016: Матэрыялы LVEE 2016
-      materials_lvee_winter_2013: Матэрыялы LVEE Winter  2013
-      materials_winter_2012: Матэрыялы LVEE Winter 2012
+    contacts: 
+      category: Кантакты
+      lug: LUG
+      official: "Кантактная інфармацыя"
+      organizers: Аргкамітет
+    editor: 
+      articles: "Article editor"
+      image_uploader: "Image uploader"
+      language: "Language editor"
+      metainfo: "Metainfo editor"
+      news: "News editor"
+      rss: "Editor RSS"
+      title: Editor
+    main: Галоўная
+    reports: 
+      about: "Пра даклады"
+      abstract: "Афармленне тэзісаў"
+      category: Даклады
+      lviv_2011: Lviv-2011
+      materials: "Матэрыялы папярэдніх канферэнцыяў"
       program: Праграма
-      title: Выступленні
-    sponsors:
-      title: Фундатары
-    user:
+    sponsors: Спонсары
+    user: 
+      category: Удзельнiкi
       conference_registration: Спiс
-      list_14: Спiс
-      list_14_2: Спiс
-      list_15: Спiс
-      list_16: Спiс
-      list_winter_16: Спiс
       profile: Профіль
-      title: Удзельнiкi
-      volunteers: Валантэры
-      winter_12: Спiс
-  message:
-    common:
-      access_denied: Доступ забаронены
-      required_fields: "(палі, адзначаныя тоўстым колерам, трэба абавязкова запоўніць)"
-      sure: Вы ўпэўнены?
-    conference:
-      created: Канферэнцыя паспяхова створаная
-      slogan: Міжнародная канферэнцыя распрацоўнікаў і карыстальнікаў свабодных праграм
-      status: Рэгістрацыя на канферэнцыю %{status}.
-      updated: Канферэнцыя паспяхова актуалізаваная
-    iefuck:
-      link: http://upgradebrowser.org/x
-      link_text: Чаму б вам не пачаць карыстацца бяспечнейшым вэб-гартачом?
-      message: Internet Explorer можа зрабіць ваш кампутар небяспечным. %{link}
-    language:
-      created: Моўны модуль паспяхова створаны
-      updated: Моўны модуль паспяхова актуалізаваны
-    license:
-      text: Увесь змест гэтага сайта, акрамя мэтэрыялаў выступленняў ды iншых адмыслова
-        зазначаных выпадкаў, распаўсюджваецца згодна з лiцэнзiяй Creative Commons
-        Attribution Share-Alike.
-    news:
-      created: Навіна паспяхова створаная
-      updated: Навіна паспяхова актуалізаваная
-    session:
-      failed: Хібная назва карыстальніка або пароль. Магчыма, вы не задзейнічалі свой
-        конт
-      logged: Вы ўвайшлі як %{user_name}
-      logged_out: Вы паспяхова выйшлі
-    user:
-      accuracy_note: Дакладнае і бясхібнае запаўненне рэгістрацыйнай формы дапаможа
-        нам з вамі скантактавацца
-      activated: Рэгістрацыя скончылася
-      avator_updated: Фотаздымак паспяхова зменены
-      avator_upload: Калі ласка, зацягніце ваш фотаздымак
-      describe: 'Карыстальнік: %{full_name} (%{country}, %{city})...'
-      incorrect_image: Не ўдалося змяніць ваш фотаздымак. Праверце ваш файл выявы.
-      login_change: Вы не можаце змяніць назву карыстальніка
-      not_found_by_email: Карыстальнік не знойдзены па электроннай пошце. Спраўдзьце
-        адрас.
-      password_restore: Забыліся пра пароль? Тады %{link} яго.
-      password_restore_note: Ліст з звесткамі для аднаўлення высланы.
-      privacy: 'Палітыка захавання таямніц: мы нікому %{link} звесткі пра ваш конт,
-        у тым ліку адрас электроннай пошты.'
-      privacy_link: не прадаем
-      registred: Дзякуй за рэгістрацыю.
-      upload_avator_link: Зацягніце свой фотаздымак %{link}.
+      wiki: Wiki
+  message: 
+    common: 
+      access_denied: "У доступе адмоўлена"
+      required_fields: "(палі, пазначаныя тлустым, запоўніць абавязкова)"
+      sure: "Вы ўпэўненыя?"
+    conference: 
+      created: "Канферэнцыя створана паспяхова"
+      slogan: "Шостая міжнародная канферэнцыя распрацоўнікаў і карыстальнікаў<br />свабодных праграмаў / праграмаў з адкрытым зыходным кодам"
+      status: "Рэгістрацыя на канферэнцыю %{status}."
+      updated: "Канферэнцыя абноўлена паспяхова"
+    iefuck: 
+      link: "http://upgradebrowser.org/x"
+      link_text: "Чаму б не перайсці на больш бяспечны браўзер?"
+      message: "Internet Explorer можа зрабіць ваш кампутар небяспечным. %{link}"
+    language: 
+      created: "Мова створана паспяхова"
+      updated: "Мова абноўлена паспяхова"
+    license: 
+      github: "The website itself is built on the <a href=\"http://github.com/partizan/lvee/\">lvee engine</a> and licensed under GPL v.2 license"
+      text: "Увесь кантэнт за выключэннем мэтэрыялаў выкладаў i iншых спецыяльна абумоўленых выпадкаў, знаходзiцца пад лiцэнзiяй Creative Commons Attribution Share-Alike"
+    news: 
+      created: "Навіна створана паспяхова"
+      updated: "Навіна абноўлена паспяхова"
+    session: 
+      failed: "Імя карыстальніка або пароль неадпаведныя. Можа, вы не актывавалі ваш рахунак"
+      logged: "Вы ўвайшлі як %{user_name}"
+      logged_out: "Вы выйшлі паспяхова"
+    user: 
+      accuracy_note: "Дакладнае і беспамылковае запаўненне рэгістрацыйнай формы дапаможа нам з вамі скантактаваць"
+      activated: "Рэгістрацыя завершана"
+      avator_updated: "Фота было паспяхова абноўленае"
+      avator_upload: "Калі ласка, залейце ваша фота"
+      describe: "Карыстальнік: %{full_name} (%{country}, %{city})..."
+      incorrect_image: "Не атрымалася абнавіць вашае фота. Праверце ваш файл выявы."
+      login_change: "Вы не можаце змяніць ваша імя карыстальніка"
+      not_found_by_email: "User not found by email. Please check email."
+      password_restore: "Forgot password? %{link} it."
+      password_restore_note: "Mail with restore information sent."
+      privacy: "Палітыка таямніцы: мы %{link} нікому сваю інфармацыю вашага рахунку, улучна з вашым адрасам электроннай пошты."
+      privacy_link: "не прадаем"
+      registred: "Дзякуй за рэгістрацыю."
+      upload_avator_link: "Залейце сваё фота %{link}."
       upload_avator_link_text: тут
-  number:
-    currency:
-      format:
+  number: 
+    currency: 
+      format: 
         delimiter: " "
         format: "%n %u"
+        precision: 2
+        separator: "."
         unit: руб.
-    format:
+    format: 
       delimiter: " "
-    human:
-      storage_units:
-      - Б
-      - кБ
-      - МБ
-      - ГБ
-      - ТБ
-  sidebar:
-    information_sponsor: Інфармацыйныя партнэры
-    organizers: Арганізатары
+      precision: 3
+      separator: "."
+    human: 
+      format: 
+        delimiter: ""
+        precision: 1
+      storage_units: 
+        - байт
+        - КБ
+        - МБ
+        - ГБ
+        - ТБ
+    percentage: 
+      format: 
+        delimiter: ""
+    precision: 
+      format: 
+        delimiter: ""
+  sidebar: 
+    information_sponsor: "Інфармацыйныя партнэры"
+    organizers: Суарганізатар
     sponsors: Фундатары
-    technical_partner: Тэхнічныя партнэры
-    technical_sponsor: Тэхнічныя фундатары
-  support:
-    array:
+    technical_partner: Партнэры
+    technical_sponsor: "Тэхнічныя фундатары"
+  support: 
+    array: 
       last_word_connector: " і "
       two_words_connector: " і "
-  time:
-    am: зранку
-    formats:
+      words_connector: ", "
+  time: 
+    am: раніцы
+    formats: 
+      default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%d %B  %Y, %H:%M"
       short: "%d %b, %H:%M"
-    pm: увечары
+    pm: вечара

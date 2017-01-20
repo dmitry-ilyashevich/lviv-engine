@@ -9,7 +9,7 @@ task :import_languages  => :environment do
     I18nUtils.import_language(def_trans, k, def_trans, false)
   end
 
-  languages = %w(be hu pl ru uk sk)
+  languages = %w(be pl ru uk)
 
   languages.each do |lang|
     puts "Importing #{lang}..."

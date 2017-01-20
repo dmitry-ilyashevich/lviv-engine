@@ -1,473 +1,509 @@
----
-pl:
-  activerecord:
-    errors:
-      messages:
-        accepted: musi być zaakceptowane
-        blank: nie może być puste
-        confirmation: nie zgadza się z potwierdzeniem
-        empty: nie może być puste
-        equal_to: musi być równe %{count}
-        even: musi być parzyste
-        exclusion: znajduje się na liście zabronionych wartości
-        greater_than: musi być większe niż %{count}
-        greater_than_or_equal_to: musi być większe lub równe %{count}
-        inclusion: nie znajduje się na liście dopuszczalnych wartości
-        invalid: jest nieprawidłowe
-        less_than: musie być mniejsze niż %{count}
-        less_than_or_equal_to: musi być mniejsze lub równe %{count}
-        not_a_number: nie jest liczbą
-        odd: musi być nieparzyste
-        taken: zostało już zajęte
-        too_long: jest za długie (maksymalnie %{count} znaków)
-        too_short: jest za krótkie (minimalnie %{count} znaków)
-        wrong_length: jest nieprawidłowej długości (powinna wynosić %{count} znaków)
-      template:
-        body: 'Błędy dotyczą następujących pól:'
-        header:
+--- 
+pl: 
+  active_scaffold: 
+    are_you_sure: "Are you sure?"
+  activerecord: 
+    errors: 
+      messages: 
+        accepted: "musi być zaakceptowane"
+        blank: "nie może być puste"
+        confirmation: "nie zgadza się z potwierdzeniem"
+        empty: "nie może być puste"
+        equal_to: "musi być równe %{count}"
+        even: "musi być parzyste"
+        exclusion: "znajduje się na liście zabronionych wartości"
+        greater_than: "musi być większe niż %{count}"
+        greater_than_or_equal_to: "musi być większe lub równe %{count}"
+        inclusion: "nie znajduje się na liście dopuszczalnych wartości"
+        invalid: "jest nieprawidłowe"
+        less_than: "musie być mniejsze niż %{count}"
+        less_than_or_equal_to: "musi być mniejsze lub równe %{count}"
+        not_a_number: "nie jest liczbą"
+        odd: "musi być nieparzyste"
+        taken: "zostało już zajęte"
+        too_long: "jest za długie (maksymalnie %{count} znaków)"
+        too_short: "jest za krótkie (minimalnie %{count} znaków)"
+        wrong_length: "jest nieprawidłowej długości (powinna wynosić %{count} znaków)"
+      template: 
+        body: "Błędy dotyczą następujących pól:"
+        header: 
           one: "%{model} nie został zachowany z powodu jednego błędu"
           other: "%{model} nie został zachowany z powodu %{count} błędów"
-  date:
-    abbr_day_names:
-    - nie
-    - pon
-    - wto
-    - śro
-    - czw
-    - pia
-    - sob
-    abbr_month_names:
-    - ''
-    - sty
-    - lut
-    - mar
-    - kwi
-    - maj
-    - cze
-    - lip
-    - sie
-    - wrz
-    - paź
-    - lis
-    - gru
-    day_names:
-    - Niedziela
-    - Poniedziałek
-    - Wtorek
-    - Środa
-    - Czwartek
-    - Piątek
-    - Sobota
-    formats:
+  date: 
+    abbr_day_names: 
+      - nie
+      - pon
+      - wto
+      - śro
+      - czw
+      - pia
+      - sob
+    abbr_month_names: 
+      - ~
+      - sty
+      - lut
+      - mar
+      - kwi
+      - maj
+      - cze
+      - lip
+      - sie
+      - wrz
+      - paź
+      - lis
+      - gru
+    day_names: 
+      - Niedziela
+      - Poniedziałek
+      - Wtorek
+      - Środa
+      - Czwartek
+      - Piątek
+      - Sobota
+    formats: 
+      default: "%Y-%m-%d"
       long: "%d %B %Y"
       short: "%d %b"
-    month_names:
-    - ''
-    - Styczeń
-    - Luty
-    - Marzec
-    - Kwiecień
-    - Maj
-    - Czerwiec
-    - Lipiec
-    - Sierpień
-    - Wrzesień
-    - Październik
-    - Listopad
-    - Grudzień
-    none: Nie ma
-  datetime:
-    distance_in_words:
-      about_x_hours:
-        one: około godziny
-        other: około %{count} godzin
-      about_x_months:
-        one: około miesiąca
-        other: około %{count} miesięcy
-      about_x_years:
-        one: około roku
-        other: około %{count} lat
-      half_a_minute: pół minuty
-      less_than_x_minutes:
-        few: mniej niż %{count} minuty
-        one: mniej niż minutę
-        other: mniej niż %{count} minut
-      less_than_x_seconds:
-        few: mniej niż %{count} sekundy
-        one: mniej niż sekundę
-        other: mniej niż %{count} sekund
-      over_x_years:
-        few: ponad %{count} lata
-        one: ponad rok
-        other: ponad %{count} lat
-      x_days:
-        one: 1 dzień
+    month_names: 
+      - ~
+      - Styczeń
+      - Luty
+      - Marzec
+      - Kwiecień
+      - Maj
+      - Czerwiec
+      - Lipiec
+      - Sierpień
+      - Wrzesień
+      - Październik
+      - Listopad
+      - Grudzień
+    none: "Nie ma"
+    order: 
+      - !ruby/symbol year
+      - !ruby/symbol month
+      - !ruby/symbol day
+  datetime: 
+    distance_in_words: 
+      about_x_hours: 
+        one: "około godziny"
+        other: "około %{count} godzin"
+      about_x_months: 
+        one: "około miesiąca"
+        other: "około %{count} miesięcy"
+      about_x_years: 
+        one: "około roku"
+        other: "około %{count} lat"
+      half_a_minute: "pół minuty"
+      less_than_x_minutes: 
+        few: "mniej niż %{count} minuty"
+        one: "mniej niż minutę"
+        other: "mniej niż %{count} minut"
+      less_than_x_seconds: 
+        few: "mniej niż %{count} sekundy"
+        one: "mniej niż sekundę"
+        other: "mniej niż %{count} sekund"
+      over_x_years: 
+        few: "ponad %{count} lata"
+        one: "ponad rok"
+        other: "ponad %{count} lat"
+      x_days: 
+        one: "1 dzień"
         other: "%{count} dni"
-      x_minutes:
+      x_minutes: 
         few: "%{count} minuty"
         one: minutę
         other: "%{count} minut"
-      x_months:
+      x_months: 
         few: "%{count} miesiące"
-        one: 1 miesiąc
+        one: "1 miesiąc"
         other: "%{count} miesięcy"
-      x_seconds:
+      x_seconds: 
         few: "%{count} sekundy"
         one: sekundę
         other: "%{count} sekund"
-    prompts:
+    prompts: 
       day: Dzień
       hour: Godzin
       minute: Minut
       month: Miesiąc
       second: Sekund
       year: Rok
-  description:
-    abstract:
-      body: |-
-        recommended languages are Belarussian, Russian or English;
-        recommended size is approximately 6000 symbols or less
-        You can use "textile":http://www.textism.com/tools/textile/ mark-up or plain text.
-    conference_registration:
-      days: W które dni planujecie Państwo uczestniczyć?
-      floor: Jeśli jedziesz własnym samochodem i chcesz mieć towarzystwo, dodaj swój
-        numer telefonu i maila do listy http://lvee.org/en/wiki_pages/%5B2013%5D%20Passing%20cars
-      food: Jakie są Państwa upodobania w jedzeniu?
-      index: Rejestracja na konferencje
-      meeting: Czy potrzeba Państwo spotkać?
-      phone: Telefon dla kontaktu z Państwem podczas konferencji (wraz z kodem kraju)
-      proposition: Ponieważ wolne oprogramowanie jest rozwijane przez społeczeństwo
-        z przyciągnięciem wielu ochotników, prosimy opowiedzieć co Państwo możecie
-        wnieść do naszego spotkania. Niech to będzie sprawozdanie albo mniej formalne
-        wygłoszenie w ramach warsztatu na temat wdrażania, wykorzystania lub rozwoju
-        wolnego oprogramowania przez Państwo lub Państwa organizację. Jeżeli zamierzacie
-        Państwo sporządzić sprawozdanie lub zorganizować warsztat prosimy określić
-        temat raportu i wysłać jego streszczenia na adres elektroniczny "d.kostiuk@lvee.org":mailto:d.kostiuk@lvee.org
-        .
-      quantity: Ilu ludzi pojedzie z Państwem na konferencje?
-      residence: Who of the registered participants you want to share room with?
-      title: Rejestracja na konferencję %{conference}
-      transport_to: Jakim transportem zamierzacie Państwo dostać się na konferencję?
-      tshirt: Rozmiar koszulek
-    user:
-      country: Skąd Państwo pochodzicie?
-      email: Państwa adres elektroniczny
-      login: co najmniej 3 symboli
-      occupation: Miejsce pracy/studiów i dziedziny działalności (z krótką nazwą organizacji)
-      password: co najmniej 4 symboli
-      password_confirmation: Takie same jak i hasło
-      password_restore: Przywracanie hasła
+  description: 
+    conference_registration: 
+      days: "W które dni planujecie Państwo uczestniczyć?"
+      floor: "Do you accept the following conditions: organization fee decreases; bed is not provided; food is provided? You can sleep in sleeping bag on the floor in the room with other participants?"
+      food: "Jakie są Państwa upodobania w jedzeniu?"
+      index: "Rejestracja na konferencje"
+      meeting: "Czy potrzeba Państwo spotkać?"
+      phone: "Telefon dla kontaktu z Państwem podczas konferencji (wraz z kodem kraju)"
+      proposition: "Ponieważ wolne oprogramowanie jest rozwijane przez społeczeństwo z przyciągnięciem wielu ochotników, prosimy opowiedzieć co Państwo możecie wnieść do naszego spotkania. Niech to będzie sprawozdanie albo mniej formalne wygłoszenie w ramach warsztatu na temat wdrażania, wykorzystania lub rozwoju wolnego oprogramowania przez Państwo lub Państwa organizację. Jeżeli zamierzacie Państwo sporządzić sprawozdanie lub zorganizować warsztat prosimy określić temat raportu i wysłać jego streszczenia na adres elektroniczny fosslviv@gmail.com ."
+      quantity: "Ilu ludzi pojedzie z Państwem na konferencje?"
+      residence: "Who of the registered participants you want to share room with?"
+      title: "Rejestracja na konferencję %{conference}"
+      transport_from: "Which transport will you use to leave the conference"
+      transport_to: "Jakim transportem zamierzacie Państwo dostać się na konferencję?"
+      tshirt: "Rozmiar koszulek"
+    user: 
+      city: ""
+      country: "Skąd Państwo pochodzicie?"
+      email: "Państwa adres elektroniczny"
+      first_name: ""
+      last_name: "Conference rules are requiring real names"
+      login: "co najmniej 3 symboli"
+      occupation: "Miejsce pracy/studiów i dziedziny działalności (z krótką nazwą organizacji)"
+      password: "co najmniej 4 symboli"
+      password_confirmation: "Takie same jak i hasło"
+      password_restore: "Przywracanie hasła"
       password_restore_link: Przywróć
-      projects: Free Software / Open Source (FS/OS) projekty w których Państwo brali
-        lub bierzecie udział i Państwa rola w nich
-      subscribed_talks: By choosing this You are going to take part in working discussions
-        on the Conference preparing and carrying on. Being a volunteer project, LVEE
-        is often subject to shortage of performers, and therefore we recomend to activate
-        this option and to actively participate in work of the organization board.
-  label:
-    abstract:
-      body: Body
-      change_summary: Change summary
-      ready_for_review: Ready for review
-      summary: Summary
-    article:
+      projects: "Free Software / Open Source (FS/OS) projekty w których Państwo brali lub bierzecie udział i Państwa rola w nich"
+      subscribed: "This option allows to receive news and other useful information from the Conference organizers."
+      subscribed_talks: "By choosing this You are going to take part in working discussions on the Conference preparing and carrying on. Being a volunteer project, LVEE is often subject to shortage of performers, and therefore we recomend to activate this option and to actively participate in work of the organization board."
+  label: 
+    article: 
       body: Ciało
       category: Kategoria
-      creating: Utwórz artykuł
-      editing: Edytuj artykuł
-      in_menu: W menu?
-      listing: Lista artykułów
+      creating: "Utwórz artykuł"
+      editing: "Edytuj artykuł"
+      in_menu: "W menu?"
+      listing: "Lista artykułów"
       locale: Język
       name: Nazwa
-      new: Nowy artykuł
+      new: "Nowy artykuł"
       title: Tytuł
-    common:
+    badge: 
+      bottom: Bottom
+      tags: Tags
+      top: Top
+    common: 
+      _select_: Wybierz
       back: Wstecz
+      back_to_list: "Back to list"
       cancel: Anuluj
       count: Ilość
       create: Utwórz
       delete: Skasuj
       download: Ściągnij
       edit: Edytuj
-      editTranslation: Edytuj tłumaczenie
+      editTranslation: "Edytuj tłumaczenie"
       preview: Podgląd
       publish: Publikuj
-      publish_now: Publikuj teraz
+      publish_now: "Publikuj teraz"
       save: Zachowaj
       show: Pokaż
       translate: Tłumacz
+      unknown_user: Unknown
       update: Aktualizuj
       upload: Prześlij
-      _select_: Wybierz
-    conference:
-      available: Możesz uczestniczyć w następujących konferencjach
-      creating: Utwórz konferencję
-      finish_date: Data ukończenia
-      listing: Lista konferencji
+      view_changes: "View changes"
+    conference: 
+      available: "Możesz uczestniczyć w następujących konferencjach"
+      creating: "Utwórz konferencję"
+      finish_date: "Data ukończenia"
+      listing: "Lista konferencji"
       name: Nazwa
-      new: Nowa konferencja
-      participated: Brałeś udział
+      new: "Nowa konferencja"
+      participated: "Brałeś udział"
+      register: "Register to %{conference}"
       registration_closed: zamknięta
       registration_opened: otwarta
-      registration_opened?: Rejestracja otwarta?
-      registred: Zarejestrowałeś się
-      show: Konferencja %{name} (%{start_date} - %{finish_date}
-      start_date: Data rozpoczęcia
-      upcoming: Najbliższe konferencje
-    conference_registration:
-      cancel_registration: Cancel registration
-      days: Dni uczestnictwa
-      floor: Zaznacz jeżeli masz własny transport i chcesz udostępnić miejsca w swoim
-        aucie innym osobom (carpooling)
-      food: Upodobania w jedzeniu
-      index: Rejestracja na konferencję
-      meeting: Czy potrzeba Państwo spotkać?
-      phone: Telefon kontaktowy
-      proposition: Państwa propozycję
+      registration_opened?: "Rejestracja otwarta?"
+      registred: "Zarejestrowałeś się"
+      show: "Konferencja %{name} (%{start_date} - %{finish_date}"
+      start_date: "Data rozpoczęcia"
+      upcoming: "Najbliższe konferencje"
+    conference_registration: 
+      approved_edit: "Confirm participation in %{conference}"
+      badges: Badges
+      badges_title: "Badges for %{conference}"
+      days: "Dni uczestnictwa"
+      edit: " %{conference} participant's data"
+      floor: "Can you sleep on the floor?"
+      food: "Upodobania w jedzeniu"
+      index: "Rejestracja na konferencję"
+      meeting: "Czy potrzeba Państwo spotkać?"
+      phone: "Telefon kontaktowy"
+      proposition: "Państwa propozycję"
       proposition_list: Sprawozdanie
-      quantity: Ilość uczestników
-      title: Rejestracja na konferencję %{conference}
-      tshirt: Rozmiar koszulek
-    diff:
-      new_abstrac_title: Abstracts from %{author} has no previous versions
-    language:
-      code3: 3-literowy (ISO 639-2) kod języka
-      creating: Utwórz język
-      editing: Edytuj język
-      id: 2-literowy identyfikator języka
-      listing: Lista języków
-      name: Pełna nazwa języka (po angielsku)
-      new: Nowy język
-      published: Czy język jest opublikowany?
-      upload: Prześlij język
-    news:
+      quantity: "Ilość uczestników"
+      residence: Accommodation
+      title: "Rejestracja na konferencję %{conference}"
+      transport_from: "Transport from conference"
+      transport_from_list: 
+        bus_grodno: "Minibus to Grodno"
+        bus_minsk: "Minibus to Minsk"
+        independent: Independent
+      transport_to: "Transport to conference"
+      transport_to_list: 
+        bus_grodno: "Minibus from Grodno"
+        bus_minsk: "Minibus from Minsk"
+        independent: Independent
+      tshirt: "Rozmiar koszulek"
+      update_model: "Conference Registration"
+    diff: 
+      change_article_title: "Diff for article %{article} from version %{from} to %{to}"
+      change_wiki_title: "Diff for page '%{wiki_page}' from version %{from} to %{to}"
+      changed_at: "Changed at"
+      editor: Editor
+      from: From
+      new_article_title: "Article %{article} has no previous versions"
+      new_wiki_title: "Page '%{wiki_page}' has no previous versions"
+      to: To
+      version: Version
+    editor_log: 
+      article_changed: "Article %{object} was changed by %{user}"
+      article_created: "Article %{object} was created by %{user}"
+      wiki_page_changed: "Wiki page %{object} was changed by %{user}"
+      wiki_page_created: "Wiki page %{object} was created by %{user}"
+    language: 
+      code3: "3-literowy (ISO 639-2) kod języka"
+      creating: "Utwórz język"
+      editing: "Edytuj język"
+      id: "2-literowy identyfikator języka"
+      listing: "Lista języków"
+      name: "Pełna nazwa języka (po angielsku)"
+      new: "Nowy język"
+      published: "Czy język jest opublikowany?"
+      upload: "Prześlij język"
+    metainfo: 
+      edit: "Edit MetaInfo"
+    news: 
       abstract: Streszczenie
-      add: Dodaj wiadomość
-      all_news: Wszystkie wiadomości
+      add: "Dodaj wiadomość"
+      all_news: "Wszystkie wiadomości"
       author: Autor
-      back_to_list: Wstecz do listy wiadomości
-      body: Ciało wiadomości
-      creating: Stwórz wiadomość
-      editing: Edytuj wiadomość
-      last_news: Ostatnie wiadomości
-      publish: Publikuj wiadomość
-      published_at: Opublikowane %{published}
+      back_to_list: "Wstecz do listy wiadomości"
+      body: "Ciało wiadomości"
+      creating: "Stwórz wiadomość"
+      editing: "Edytuj wiadomość"
+      last_news: "Ostatnie wiadomości"
+      publish: "Publikuj wiadomość"
+      published_at: "Opublikowane %{published}"
       title: Tytuł
-      translating: Tłumacz wiadomość
-      unpublished: Nie opublikowano
-      will_be_published: Będzie opublikowane %{published}
-    session:
+      translating: "Tłumacz wiadomość"
+      unpublished: "Nie opublikowano"
+      will_be_published: "Będzie opublikowane %{published}"
+    session: 
       login: Login
       loginButton: Zaloguj
       logout: Wyloguj
       password: Hasło
-      rememberMe: Zapamiętać mnie
-    statistics:
+      rememberMe: "Zapamiętać mnie"
+    statistics: 
       browser: Przeglądarka
-      conference: Statystyka rejestracji na %{conference}
+      conference: "Statystyka rejestracji na %{conference}"
       country: Kraj
-      operating_system: System operacyjny
-      registration:
-        approved_men: Approved men
-        total_men: Total men
-      title:
-        browser_statistic: Statystyka używanych przeglądarek
-        conference: Statystyka rejestracji na konferencję
-        country_statistic: Podział odwiedzających według kraju
-        full: Statystyka z 20 kwietnia 2009
-        month: Statystyka z ostatniego miesiąca
-        os_statistic: Statystyka używanych systemów operacyjnych
-        total_visitors: 'Łączna suma odwiedzin: %{count}'
-        week: Statystyka z ostatniego tygodnia
+      operating_system: "System operacyjny"
+      registration: 
+        approved_men: "Approved men"
+        approved_registrations: "Approved registration"
+        days_title: "Participance days statistics"
+        registration_title: "Registration statistics"
+        total_men: "Total men"
+        total_registrations: "Total registration"
+        transport_from_title: "Transport from conference statistics"
+        transport_to_title: "Transport to conference statistics"
+      title: 
+        browser_statistic: "Statystyka używanych przeglądarek"
+        conference: "Statystyka rejestracji na konferencję"
+        country_statistic: "Podział odwiedzających według kraju"
+        full: "Statystyka z 20 kwietnia 2009"
+        month: "Statystyka z ostatniego miesiąca"
+        os_statistic: "Statystyka używanych systemów operacyjnych"
+        total_visitors: "Łączna suma odwiedzin: %{count}"
+        week: "Statystyka z ostatniego tygodnia"
       visits: Odwiedziny
-    user:
+    user: 
       avator: Zdjęcie
       city: Miasto
       country: Kraj
-      create: Zarejestruj się
-      edit: Edytuj profil
-      email: Adres elektroniczny
+      create: "Zarejestruj się"
+      edit: "Edytuj profil"
+      email: "Adres elektroniczny"
       first_name: Imię
-      full_name: Pełne imię i nazwisko
-      join_us: Dołącz się do nas teraz
+      from: From
+      full_name: "Pełne imię i nazwisko"
+      join_us: "Dołącz się do nas teraz"
       last_name: Nazwisko
-      occupation: Miejsce pracy
+      login: Login
+      occupation: "Miejsce pracy"
       password: Hasło
-      password_confirmation: Potwierdzenie hasła
-      password_restore: Przywracanie hasła
+      password_confirmation: "Potwierdzenie hasła"
+      password_restore: "Przywracanie hasła"
       password_restore_link: Przywróć
       photo: Zdjęcie
       projects: Projekty
-      register: Zarejestruj się
+      register: "Zarejestruj się"
+      subscribed: "Subscribe to information maillist"
+      subscribed_talks: "Subscribe to organization board talks mailllist"
       title: "%{full_name} (%{login}), Twój profil w Twoich rękach"
-      to_profile: Do profilu
-  mail:
-    account:
+      to_profile: "Do profilu"
+      update_model: "Edit your personal data"
+    wiki_page: 
+      body: Body
+      creating: "Creating Wiki Page"
+      editing: "Editing Wiki Page"
+      listing: "Listing Wiki Pages"
+      name: Name
+      new: "New Wiki Page"
+      user: "Last Editor"
+  mail: 
+    account: 
       activate: |-
-        Odwiedź następujący adres URL do aktywacji konta
-        %{url}
-      activated: Twoje konto zostało aktywowane
-      activation_restore: Konto musi zostać aktywowane przed logowaniem
-      created: Twoje konto zostało utworzone
+          Odwiedź następujący adres URL do aktywacji konta
+          %{url}
+      activated: "Twoje konto zostało aktywowane"
+      activation_restore: "Konto musi zostać aktywowane przed logowaniem"
+      created: "Twoje konto zostało utworzone"
       edit_data: |-
-        Możesz się zalogować się i edytować swoje dane:
-        %{url}
+          Możesz się zalogować się i edytować swoje dane:
+          %{url}
       information: |-
-        Login:    %{login}
-        Hasło: %{password}
+          Login:    %{login}
+          Hasło: %{password}
       restore: |-
-        Przywrócenie hasła zażądane od adresu %{ip}.
-        Hasło zostało zresetowane. Powyżej znajdziesz nowe informacje logowania.
-    signature: "-- \nZ poważaniem, robot"
-    subject:
-      activation: Aktywacja konta na LVEE
-      activation_complete: Twoje konto LVEE zostało aktywowane
-      activation_restore: Aktywacją konta LVEE (powtórzyć)
-      password_restore: Przywracanie hasła LVEE
-    title: Witaj, %{full_name}
-  menu:
-    admin:
-      conferences: Administrator konferencji
-      conference_registrations: Administrator rejestracji na konferencję
-      info_mailer: Rozsyłanie listy mailingowej z info@lvee.org
-      sponsors: Administrator sponsorów
-      statuses: Administrator statusów
+          Przywrócenie hasła zażądane od adresu %{ip}.
+          Hasło zostało zresetowane. Powyżej znajdziesz nowe informacje logowania.
+    signature: |-
+        -- 
+        Z poważaniem, robot
+    subject: 
+      activation: "Aktywacja konta na LVEE"
+      activation_complete: "Twoje konto LVEE zostało aktywowane"
+      activation_restore: "Aktywacją konta LVEE (powtórzyć)"
+      password_restore: "Przywracanie hasła LVEE"
+    title: "Witaj, %{full_name}"
+  menu: 
+    admin: 
+      conference_registrations: "Administrator rejestracji na konferencję"
+      conferences: "Administrator konferencji"
+      info_mailer: "Rozsyłanie listy mailingowej z fosslviv@gmail.com"
+      sponsors: "Administrator sponsorów"
+      statuses: "Administrator statusów"
       title: Administrator
-      users: Zarządzanie użytkownikami
-    conference:
-      about: O konferencji
+      users: "Zarządzanie użytkownikami"
+    conference: 
+      about: "O konferencji"
       attribution: Atrybucja
-      attribution_winter: Atrybucja
       history: Historia
+      linux: GNU/Linux
       payment: Opłaty
-      payment_winter: Opłaty
-      place: Miejsce konferencji
-      place_winter: Miejsce konferencji
-      press: W prasie
+      place: "Miejsce konferencji"
+      press: "W prasie"
       statistics: Statystyki
-      title: O konferencji
-    contacts:
-      title: Kontakty
-    editor:
-      articles: Edytor artykułów
-      image_uploader: Uploader obrazów
-      language: Edytor języków
-      news: Edytor wiadomości
-      rss: Edytor RSS
+    contacts: 
+      category: Kontakty
+      lug: LUG
+      official: "Official Contacts"
+      organizers: "Organization Board"
+    editor: 
+      articles: "Edytor artykułów"
+      image_uploader: "Uploader obrazów"
+      language: "Edytor języków"
+      metainfo: "Metainfo editor"
+      news: "Edytor wiadomości"
+      rss: "Edytor RSS"
       title: Edytor
-    main:
-      title: Strona główna
-    reports:
+    main: "Strona główna"
+    reports: 
       about: Sprawozdania
-      abstract: Streszczenie wytyczne
-      lvee_2012_materials: Materiały LVEE 2012
-      lvee_2013_materials: Materiały LVEE 2013
-      lvee_2014_materials: Materiały LVEE 2014
-      lvee_2015_materials: Materiały LVEE 2015
-      lvee_winter_2014_presentations: Materiały LVEE Winter 2014
-      materials_2005: Materiały LVEE 2005
-      materials_2006: Materiały LVEE 2006
-      materials_2007: Materiały LVEE 2007
-      materials_2008: Materiały LVEE 2008
-      materials_2009: Materiały LVEE 2009
-      materials_2010: Materiały LVEE 2010
-      materials_2011: Materiały LVEE 2011
-      materials_2012: Materiały LVEE 2012
-      materials_2016: Materiały LVEE 2016
-      materials_lvee_winter_2013: Materiały LVEE Winter 2013
-      materials_winter_2012: Materiały LVEE Winter 2012
-      program: Program konferencji
-      title: Sprawozdania
-    sponsors:
-      title: Sponsorzy
-    user:
-      conference_registration: Uczestnicy konferencji
-      list_14: 'Uczestnicy konferencji '
-      list_14_2: Uczestnicy konferencji
-      list_15: Uczestnicy konferencji
-      list_winter_16: Uczestnicy konferencji
-      profile: Profil
-      title: Uczestnicy
-      volunteers: Wolontariuszy
-      winter_12: Uczestnicy konferencji
-  message:
-    common:
-      access_denied: Dostęp zabroniony
-      required_fields: "(pola oznaczone tłustym drukiem są obowiązkowe do wypełnienia)"
-      sure: Czy na pewno??
-    conference:
-      created: Pomyślnie utworzono konferencję
-      slogan: Międzynarodowa konferencja twórców<br />i użytkowników Free Software
-        / Open Source (FS/OS)
-      status: 'Rejestracja na konferencję: %{status}.'
-      updated: Pomyślnie zaktualizowano konferencję
-    iefuck:
-      link: http://upgradebrowser.org/x
-      link_text: Dowiedzieć się więcej o współczesnych i bezpiecznych przeglądarkach!
-      message: Ta wersja programu Internet Explorer niepoprawnie pokazuje współczesne
-        strony internetowe i czyni komputer niebezpiecznym. %{link}
-    language:
-      created: Pomyślnie utworzono język
-      updated: Pomyślnie zaktualizowano język
-    license:
-      text: Wszystkie materiały oprócz treści sprawozdań oraz innych wymienionych
-        dokumentów są na licencji Creative Commons Attribution Share-Alike
-    news:
-      created: Pomyślnie utworzono wiadomość
-      updated: Pomyślnie zaktualizowano wiadomość
-    session:
-      failed: Login lub hasło są nieprawidłowe. Może nie uaktywniłeś konto.
-      logged: Jesteś zalogowany jako %{user_name}
-      logged_out: Jesteś wylogowany
-    user:
-      accuracy_note: Dokładne i wolne od błędów wypełnienie formularzu rejestracyjnego
-        bardzo pomoże w kontakcie z Tobą
-      activated: Ukończono rejestrację
-      avator_updated: Pomyślnie zaktualizowano zdjęcie
-      avator_upload: Prosimy przesłać zdjęcie. Z twarzy (jeśli to możliwe)
-      describe: 'Użytkownik: %{full_name} (%{country}, %{city})...'
-      incorrect_image: Nie można zaktualizować zdjęcia. Proszę sprawdzić plik obrazu
-      login_change: Nie można zmienić swój login
-      not_found_by_email: Nie znaleziono użytkownika według adresu e-mail. Proszę
-        sprawdzić e-mail.
-      password_restore: Zapomniałeś hasło? %{link} hasło.
-      password_restore_note: Poczta z informacją o przywróceniu hasła została wysłana.
-      privacy: 'Polityka prywatności: My %{link} informację o koncie, w tym adres
-        mailowy, osobom trzecim'
-      privacy_link: nie sprzedajemy
-      registred: Dziękujemy za rejestrację
-  number:
-    currency:
-      format:
-        format: "%n %u"
-        unit: PLN
-    format:
-      delimiter: " "
-      precision: '2'
-      separator: ","
-    human:
-      storage_units:
-      - B
-      - KB
-      - MB
-      - GB
-      - TB
-  sidebar:
-    information_sponsor: Partnerzy informacyjni
-    organizers: Organizatorzy
+      abstract: "Streszczenie wytyczne"
+      category: Sprawozdania
+      lviv_2011: Lviv-2011
+      materials: "Materiały konferencji"
+      program: "Program konferencji"
     sponsors: Sponsorzy
-    technical_partner: Partnerzy techniczni
-    technical_sponsor: Sponsorzy techniczni
-  support:
-    array:
+    user: 
+      category: Uczestnicy
+      conference_registration: "Uczestnicy konferencji"
+      profile: Profil
+      wiki: Wiki
+  message: 
+    common: 
+      access_denied: "Dostęp zabroniony"
+      required_fields: "(pola oznaczone tłustym drukiem są obowiązkowe do wypełnienia)"
+      sure: "Czy na pewno??"
+    conference: 
+      created: "Pomyślnie utworzono konferencję"
+      slogan: "Szósta Międzynarodowa konferencja twórców i użytkowników<br />Free Software / Open Source (FS/OS)"
+      status: "Rejestracja na konferencję: %{status}."
+      updated: "Pomyślnie zaktualizowano konferencję"
+    iefuck: 
+      link: "http://upgradebrowser.org/x"
+      link_text: "Dowiedzieć się więcej o współczesnych i bezpiecznych przeglądarkach!"
+      message: "Ta wersja programu Internet Explorer niepoprawnie pokazuje współczesne strony internetowe i czyni komputer niebezpiecznym. %{link}"
+    language: 
+      created: "Pomyślnie utworzono język"
+      updated: "Pomyślnie zaktualizowano język"
+    license: 
+      github: "The website itself is built on the <a href=\"http://github.com/partizan/lvee/\">lvee engine</a> and licensed under GPL v.2 license"
+      text: "Wszystkie materiały oprócz treści sprawozdań oraz innych wymienionych dokumentów są na licencji Creative Commons Attribution Share-Alike"
+    news: 
+      created: "Pomyślnie utworzono wiadomość"
+      updated: "Pomyślnie zaktualizowano wiadomość"
+    session: 
+      failed: "Login lub hasło są nieprawidłowe. Może nie uaktywniłeś konto."
+      logged: "Jesteś zalogowany jako %{user_name}"
+      logged_out: "Jesteś wylogowany"
+    user: 
+      accuracy_note: "Dokładne i wolne od błędów wypełnienie formularzu rejestracyjnego bardzo pomoże w kontakcie z Tobą"
+      activated: "Ukończono rejestrację"
+      avator_updated: "Pomyślnie zaktualizowano zdjęcie"
+      avator_upload: "Prosimy przesłać zdjęcie. Z twarzy (jeśli to możliwe)"
+      describe: "Użytkownik: %{full_name} (%{country}, %{city})..."
+      incorrect_image: "Nie można zaktualizować zdjęcia. Proszę sprawdzić plik obrazu"
+      login_change: "Nie można zmienić swój login"
+      not_found_by_email: "Nie znaleziono użytkownika według adresu e-mail. Proszę sprawdzić e-mail."
+      password_restore: "Zapomniałeś hasło? %{link} hasło."
+      password_restore_note: "Poczta z informacją o przywróceniu hasła została wysłana."
+      privacy: "Polityka prywatności: My %{link} informację o koncie, w tym adres mailowy, osobom trzecim"
+      privacy_link: "nie sprzedajemy"
+      registred: "Dziękujemy za rejestrację"
+  number: 
+    currency: 
+      format: 
+        delimiter: ","
+        format: "%n %u"
+        precision: 2
+        separator: "."
+        unit: PLN
+    format: 
+      delimiter: " "
+      precision: 2
+      separator: ","
+    human: 
+      format: 
+        delimiter: ""
+        precision: 1
+      storage_units: 
+        - B
+        - KB
+        - MB
+        - GB
+        - TB
+    percentage: 
+      format: 
+        delimiter: ""
+    precision: 
+      format: 
+        delimiter: ""
+  sidebar: 
+    information_sponsor: "Partnerzy informacyjni"
+    organizers: Współorganizator
+    sponsors: Sponsorzy
+    technical_partner: Partnerzy
+    technical_sponsor: "Sponsorzy techniczni"
+  support: 
+    array: 
       last_word_connector: ", i "
       sentence_connector: i
-      skip_last_comma: '1'
+      skip_last_comma: true
       two_words_connector: " i "
-  time:
-    am: przed południem
-    formats:
+      words_connector: ", "
+  time: 
+    am: "przed południem"
+    formats: 
       default: "%a, %d %b %Y, %H:%M:%S %z"
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
-    pm: po południu
+    pm: "po południu"

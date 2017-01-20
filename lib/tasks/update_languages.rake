@@ -10,7 +10,7 @@ task :update_languages  => :environment do
     end
   end
   puts "Updating..."
-  languages = %w(be hu pl ru uk sk)
+  languages = %w(be pl ru uk)
 
   def_lang = YAML.load_file("#{LOCALE_DIR}/en.yml")
 

@@ -7,8 +7,9 @@ xml.rss(:version=>"2.0") do
     xml.language("#{I18n.locale}")
     for change in @changes
       xml.item do
-        title = t("label.editor_log.#{change.change_type}", :obj => change.object_name,
-          :user => change.user_name)
+        title = t("label.editor_log.#{change.change_type}",
+                  :obj => change.object_name,
+                  :user => change.user_name)
         xml.title(title)
 
         xml.description(change.body)

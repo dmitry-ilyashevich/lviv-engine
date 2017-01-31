@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
-  default :from => "info@lvee.org"
-  PREFIX = "[lvee] "
+  default :from => "fosslviv@gmail.com"
+  PREFIX = "[conference.linux.lviv.ua] "
 
   def signup_notification(user)
     @user = user
@@ -51,8 +51,8 @@ You've got a comment to your abstracts for <%= conference.name %>
 
 Вы получили комментарий рецензента к своим тезисам, поданным на  <%= conference.name %>
 
--- 
-LVEE team"
+--
+FOSS Lviv team"
 
     mail :to => user.email, :subject => PREFIX + ERB.new(mail_subject).result(binding) do |format|
       format.text{ render :text => ERB.new(mail_body).result(binding)}

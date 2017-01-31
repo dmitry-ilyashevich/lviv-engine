@@ -51,9 +51,9 @@ module ApplicationHelper
 
   def page_title
     if @title.blank?
-      'LVEE'
+      'FOSS Lviv'
     else
-      h("#{@title} - LVEE")
+      h("#{@title} - FOSS Lviv")
     end
   end
 

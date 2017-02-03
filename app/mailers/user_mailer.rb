@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "fosslviv@gmail.com"
+  default :from => "info@empathy.by"
   PREFIX = "[conference.linux.lviv.ua] "
 
   def signup_notification(user)

@@ -1,5 +1,5 @@
 class InfoMailer < ActionMailer::Base
-  default :from => "fosslviv@gmail.com"
+  default :from => "info@empathy.by"
 
   def info_mail(to, subject, text)
     mail(:to => to, :subject => subject, :body => text)

@@ -8,6 +8,7 @@ set :linked_files, %w{
   config/database.yml
   config/secrets.yml
   config/puma.rb
+  config/environments/production.rb
 }
 set :linked_dirs, %w{bin log tmp/pids tmp/cache public/uploads}
 set :keep_releases, 5

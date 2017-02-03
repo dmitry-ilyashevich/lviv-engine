@@ -69,4 +69,10 @@ group :development do
   gem 'guard-spork'
   gem 'guard-rails'
   gem 'guard-bundler'
+
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano3-puma'
 end

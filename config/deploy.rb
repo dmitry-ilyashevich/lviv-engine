@@ -21,7 +21,7 @@ set :default_stage, 'production'
 set :log_level, :info
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.4.0'
+set :rbenv_ruby, '2.3.3'
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all
 

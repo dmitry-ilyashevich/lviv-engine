@@ -1,4 +1,4 @@
-lock '3.7.1'
+lock '3.7.2'
 
 set :application, 'lviv'
 set :repo_url, 'git@github.com:dmitry-ilyashevich/lviv-engine.git'
@@ -16,7 +16,7 @@ set :ssh_options, {
   forward_agent: true,
   auth_methods: %w(publickey)
 }
-set :stages, %w(production)
+set :stages, %w(production staging)
 set :default_stage, 'production'
 set :log_level, :info
 
@@ -35,16 +35,6 @@ set :puma_error_log, "#{release_path}/log/puma.access.log"
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
-
-role :app, %w{application@139.162.186.95}
-role :db,  %w{application@139.162.186.95}
-role :web,  %w{application@139.162.186.95}
-server '139.162.186.95', user: 'application', roles: %w{app db web}
-
-set :rails_env, 'production'
-set :branch, 'master'
-
-set :puma_env, 'production'
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'

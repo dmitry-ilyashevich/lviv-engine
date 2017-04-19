@@ -53,3 +53,7 @@ LATEX_WS_BASE = 'http://www.codecogs.com/png.latex?'
 SITE_DOMAIN = "conference.linux.lviv.ua"
 SITE_PROTOCOL = "https"
 SITE_URL = "#{SITE_PROTOCOL}://#{SITE_DOMAIN}/"
+SITE_TITLE = "FOSS Lviv"
+SITE_FULL_TITLE = "Free/Libre and Open-Source Software Lviv"
+INFO_MAIL = "info@empathy.by"
+CHROME_TAB_COLOR = "#1A5E92"

@@ -59,7 +59,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 
-gem 'puma'
+gem 'puma', '~> 3.6.0'
 
 group :development do
 #  gem 'web-console', '~> 2.0'
